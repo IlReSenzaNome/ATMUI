@@ -1,8 +1,6 @@
 package Main;
 
-import java.util.Scanner;
 import Interfaces.BankUI;
-import Logic.BankLogic;
 
 public class Main {
 

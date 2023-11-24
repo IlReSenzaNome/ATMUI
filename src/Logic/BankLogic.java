@@ -1,16 +1,18 @@
 package Logic;
 
-import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class BankLogic {
 
     private int password, newpassword;
-    private float availableBalance, withdrawalAmount, depositAmount;
+    private float withdrawalAmount, depositAmount;
+    private double availableBalance = Math.random() * 2500 + 500;
 
     public BankLogic() {
     }
 
-    public BankLogic(int password, int newpassword, float availableBalance, float withdrawalAmount, float depositAmount) {
+    public BankLogic(int password, int newpassword, double availableBalance, float withdrawalAmount, float depositAmount) {
         this.password = password;
         this.newpassword = newpassword;
         this.availableBalance = availableBalance;
@@ -30,8 +32,12 @@ public class BankLogic {
         return newpassword;
     }
 
-    public float getAvailableBalance() {
+    public double getAvailableBalance() {
         return availableBalance;
+    }
+
+    public void setAvailableBalance(double availableBalance) {
+        this.availableBalance = availableBalance;
     }
 
     public float getWithdrawalAmount() {
@@ -59,7 +65,10 @@ public class BankLogic {
     }
 
     public boolean validatePassword(int password) {
-        return 123 == password;
+        for (int i = 1; i < 4; i++) {
+            return password == 1234;
+        }
+        return false;
     }
 
     public int validateNewPassword(int newpassword) {
@@ -71,37 +80,20 @@ public class BankLogic {
         }
     }
 
-    public int rotulo() {
-        Scanner scanner = new Scanner(System.in);
-        int option = 0; // opcao do usuario
-        System.out.println("Main Menu");
-        System.out.println("1 - View my balance");
-        System.out.println("2 - Withdraw cash");
-        System.out.println("3 - Deposit funds");
-        System.out.println("4 - Exit");
-        System.out.println("Enter a choice: ");
-        option = scanner.nextInt();
-        return option;
+    public String datecurrent(String formating) {
+        LocalDate currentdate = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(formating);
+        return currentdate.format(formatter);
     }
-
-    public void selection(int option) {
-        switch (option) {
-            case 1 -> {
-                System.out.println("Balance Information:");
-                System.out.println(" - Available balance: $" + this.availableBalance);
-                System.out.println(" - Total balance: $" + this.availableBalance);
-            }
-            case 2 ->
-                System.out.println("Please enter a withdrawal amount: ");
-            case 3 ->
-                System.out.println("Please enter a deposit amount: ");
-            case 4 -> {
-                System.out.println("Exiting the system...");
-                System.exit(0);
-            }
-            default ->
-                System.out.println("Invalid selection. Try again.");
-        }
+    
+    public double availableBalan(){
+        return this.availableBalance;
+    }
+    
+    public double depositAmound(double depositamound){
+        double Deposit = availableBalance + depositamound;
+        
+        return 0;
     }
 
 }
