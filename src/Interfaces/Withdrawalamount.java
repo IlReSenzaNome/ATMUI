@@ -1,5 +1,7 @@
 package Interfaces;
 
+import Logic.BankLogic;
+
 public class Withdrawalamount extends javax.swing.JFrame {
 
     public Withdrawalamount() {
@@ -7,7 +9,6 @@ public class Withdrawalamount extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -61,7 +62,7 @@ public class Withdrawalamount extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(22, 36, 71));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("89 $ > ");
+        jButton3.setText("80 $ > ");
         jButton3.setBorder(null);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,18 +75,33 @@ public class Withdrawalamount extends javax.swing.JFrame {
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("100 $ > ");
         jButton4.setBorder(null);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 170, 40));
 
         jButton5.setBackground(new java.awt.Color(22, 36, 71));
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("< $ 20");
         jButton5.setBorder(null);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 170, 40));
 
         jButton6.setBackground(new java.awt.Color(22, 36, 71));
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("< $ 50");
         jButton6.setBorder(null);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 170, 40));
 
         jButton7.setBackground(new java.awt.Color(22, 36, 71));
@@ -103,12 +119,22 @@ public class Withdrawalamount extends javax.swing.JFrame {
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setText("Another Amount");
         jButton8.setBorder(null);
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 170, 40));
 
         jButton9.setBackground(new java.awt.Color(22, 36, 71));
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
         jButton9.setText("< $ 40");
         jButton9.setBorder(null);
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 170, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -132,16 +158,59 @@ public class Withdrawalamount extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        Witdrawvalue witdraw = new Witdrawvalue();
+        this.setVisible(false);
+        witdraw.setVisible(true);
+        witdraw.printing(10);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        Witdrawvalue witdraw = new Witdrawvalue();
+        this.setVisible(false);
+        witdraw.setVisible(true);
+        witdraw.printing(60);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        Witdrawvalue witdraw = new Witdrawvalue();
+        this.setVisible(false);
+        witdraw.setVisible(true);
+        witdraw.printing(80);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        withdrawSuccesfull withdraw = new withdrawSuccesfull();
+        this.setVisible(false);
+        withdraw.setVisible(true);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Witdrawvalue witdraw = new Witdrawvalue();
+        this.setVisible(false);
+        witdraw.setVisible(true);
+        witdraw.printing(100);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        Witdrawvalue witdraw = new Witdrawvalue();
+        this.setVisible(false);
+        witdraw.setVisible(true);
+        witdraw.printing(50);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        Witdrawvalue witdraw = new Witdrawvalue();
+        this.setVisible(false);
+        witdraw.setVisible(true);
+        witdraw.printing(40);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        Witdrawvalue witdraw = new Witdrawvalue();
+        this.setVisible(false);
+        witdraw.setVisible(true);
+        witdraw.printing(20);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

@@ -8,5 +8,6 @@ public class Main {
         BankUI bankui = new BankUI();
         bankui.setVisible(true);
     }
+    
 
 }

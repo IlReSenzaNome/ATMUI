@@ -11,6 +11,7 @@ public class Query extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         banklogic = new BankLogic();
+        queryconsult();
     }
 
     @SuppressWarnings("unchecked")
@@ -89,13 +90,18 @@ public class Query extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
     
     private void DateMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DateMouseMoved
-        String acurrentdate = banklogic.datecurrent("dd-MM-yyyy");
-        Date.setText("Consultation Date: " + acurrentdate);
+        //
     }//GEN-LAST:event_DateMouseMoved
 
-    private void availableMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_availableMouseMoved
+    public void queryconsult(){
+        String acurrentdate = banklogic.datecurrent("dd-MM-yyyy");
+        Date.setText("Consultation Date: " + acurrentdate);
         double saldo = banklogic.availableBalan();
         available.setText("- Available Balance: $ "+ saldo);
+    }
+    
+    private void availableMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_availableMouseMoved
+        //
     }//GEN-LAST:event_availableMouseMoved
 
     

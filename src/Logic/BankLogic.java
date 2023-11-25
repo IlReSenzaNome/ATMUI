@@ -2,6 +2,7 @@ package Logic;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import javax.swing.JOptionPane;
 
 public class BankLogic {
 
@@ -71,12 +72,12 @@ public class BankLogic {
         return false;
     }
 
-    public int validateNewPassword(int newpassword) {
+    public boolean validateNewPassword(int newpassword) {
         if (newpassword == this.password) {
-            return 0;
+            return true;
         } else {
             this.password = newpassword;
-            return 1;
+            return false;
         }
     }
 
@@ -85,15 +86,29 @@ public class BankLogic {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(formating);
         return currentdate.format(formatter);
     }
-    
-    public double availableBalan(){
+
+    public double availableBalan() {
         return this.availableBalance;
     }
-    
-    public double depositAmound(double depositamound){
-        double Deposit = availableBalance + depositamound;
-        
+
+    public double depositAmound(double depositamount) {
+        if (depositamount > 0) {
+            availableBalance += depositamount;
+            return availableBalance;
+        } else {
+            JOptionPane.showMessageDialog(null, "Incorrect Value");
+        }
+
         return 0;
+    }
+
+    public double withdrawamount(double withdraw) {
+        if (withdraw > 0 && withdraw <= availableBalance) {
+            return availableBalance -= withdraw;
+        } else {
+            JOptionPane.showMessageDialog(null, "Retiro no valido. Verifica el monto o el saldo disponible");
+            return availableBalance;
+        }
     }
 
 }
