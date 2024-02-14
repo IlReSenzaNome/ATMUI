@@ -4,7 +4,6 @@ import javax.swing.text.PasswordView;
 
 public class MainMenu extends javax.swing.JFrame {
 
-    
     public MainMenu() {
         initComponents();
         setLocationRelativeTo(null);
@@ -128,9 +127,6 @@ public class MainMenu extends javax.swing.JFrame {
         depositamound.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

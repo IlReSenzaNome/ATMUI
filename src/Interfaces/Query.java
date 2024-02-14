@@ -5,12 +5,11 @@ import java.nio.charset.Charset;
 
 public class Query extends javax.swing.JFrame {
 
-    private BankLogic banklogic;
+    private BankLogic banklogic = new BankLogic();
 
     public Query() {
         initComponents();
         setLocationRelativeTo(null);
-        banklogic = new BankLogic();
         queryconsult();
     }
 
@@ -88,23 +87,22 @@ public class Query extends javax.swing.JFrame {
         this.setVisible(false);
         bankui.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
-    
+
     private void DateMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DateMouseMoved
         //
     }//GEN-LAST:event_DateMouseMoved
 
-    public void queryconsult(){
+    public void queryconsult() {
         String acurrentdate = banklogic.datecurrent("dd-MM-yyyy");
         Date.setText("Consultation Date: " + acurrentdate);
         double saldo = banklogic.availableBalan();
-        available.setText("- Available Balance: $ "+ saldo);
+        available.setText("- Available Balance: $ " + saldo);
     }
-    
+
     private void availableMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_availableMouseMoved
         //
     }//GEN-LAST:event_availableMouseMoved
 
-    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -40,7 +40,6 @@ public class newPassword extends javax.swing.JFrame {
 
         newPassword.setBackground(new java.awt.Color(22, 36, 71));
         newPassword.setForeground(new java.awt.Color(255, 255, 255));
-        newPassword.setText("Password");
         newPassword.setBorder(null);
         newPassword.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -119,7 +118,7 @@ public class newPassword extends javax.swing.JFrame {
                 javax.swing.JOptionPane.showConfirmDialog(this, "Set no compatibel");
             }
         } catch (NumberFormatException e) {
-            javax.swing.JOptionPane.showConfirmDialog(this, "La contraseña debe ser un número.");
+            javax.swing.JOptionPane.showConfirmDialog(this, "the password must be numbers only.");
         }
     }//GEN-LAST:event_changePasswordActionPerformed
 

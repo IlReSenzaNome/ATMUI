@@ -43,7 +43,6 @@ public class BankUI extends javax.swing.JFrame {
 
         inputPassword.setBackground(new java.awt.Color(22, 36, 71));
         inputPassword.setForeground(new java.awt.Color(255, 255, 255));
-        inputPassword.setText("****");
         inputPassword.setBorder(null);
         inputPassword.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -53,6 +52,11 @@ public class BankUI extends javax.swing.JFrame {
         inputPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputPasswordActionPerformed(evt);
+            }
+        });
+        inputPassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                inputPasswordKeyPressed(evt);
             }
         });
         root.add(inputPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 180, 30));
@@ -142,8 +146,8 @@ public class BankUI extends javax.swing.JFrame {
         inputPassword.setText("");
     }//GEN-LAST:event_inputPasswordMousePressed
 
-    private int attempts = 0; 
-    
+    private int attempts = 0;
+
     private void sendCheckPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sendCheckPasswordMouseClicked
         BankLogic banklogic = new BankLogic();
         MainMenu mainmenu = new MainMenu();
@@ -167,10 +171,13 @@ public class BankUI extends javax.swing.JFrame {
                 }
             }
         } catch (NumberFormatException e) {
-            javax.swing.JOptionPane.showConfirmDialog(this, "La contraseña debe ser un número.");
+            javax.swing.JOptionPane.showConfirmDialog(this, "The password must be just a number.");
         }
     }//GEN-LAST:event_sendCheckPasswordMouseClicked
 
+    private void inputPasswordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_inputPasswordKeyPressed
+        // TODO add your handing code here.
+    }//GEN-LAST:event_inputPasswordKeyPressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton exitButton;

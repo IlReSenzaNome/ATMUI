@@ -7,7 +7,7 @@ public class Witdrawvalue extends javax.swing.JFrame {
     public Witdrawvalue() {
         initComponents();
         setLocationRelativeTo(null);
-        
+
     }
 
     /**
@@ -124,7 +124,7 @@ public class Witdrawvalue extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void DateMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DateMouseMoved
-      
+
     }//GEN-LAST:event_DateMouseMoved
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -135,8 +135,8 @@ public class Witdrawvalue extends javax.swing.JFrame {
 
     private double resultado = 0.0;
     private BankLogic banklogic = new BankLogic();
-    
-    public void printing(int valor){
+
+    public void printing(int valor) {
         String acurrentdate = banklogic.datecurrent("dd-MM-yyyy");
         Date.setText("Withdraw Date: " + acurrentdate);
         printvalue1.setText("Value to widthdrall: " + valor);
@@ -146,16 +146,13 @@ public class Witdrawvalue extends javax.swing.JFrame {
     }
 
     private void printvalue1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printvalue1MouseMoved
-        
+
     }//GEN-LAST:event_printvalue1MouseMoved
 
     private void printvalueMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printvalueMouseMoved
         // TODO add your handling code here:
     }//GEN-LAST:event_printvalueMouseMoved
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -116,7 +116,7 @@ public class withdrawSuccesfull extends javax.swing.JFrame {
             String change = String.valueOf(changing);
             print1.setText(change);
         } catch (NumberFormatException e) {
-            javax.swing.JOptionPane.showConfirmDialog(this, "Solo se aceptan numeros.");
+            javax.swing.JOptionPane.showConfirmDialog(this, "only numbers are accepted.");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

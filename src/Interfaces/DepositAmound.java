@@ -123,12 +123,12 @@ public class DepositAmound extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private BankLogic banklogic = new BankLogic();
-    
-    public void dateprint(){
+
+    public void dateprint() {
         String acurrentdate = banklogic.datecurrent("dd-MM-yyyy");
         Date.setText("Deposit Date: " + acurrentdate);
     }
-    
+
     private void DateMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DateMouseMoved
         //
     }//GEN-LAST:event_DateMouseMoved
@@ -146,7 +146,7 @@ public class DepositAmound extends javax.swing.JFrame {
             String change = String.valueOf(changing);
             responsive.setText(change);
         } catch (NumberFormatException e) {
-            javax.swing.JOptionPane.showConfirmDialog(this, "Solo se aceptan numeros.");
+            javax.swing.JOptionPane.showConfirmDialog(this, "only numbers are accepted.");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
